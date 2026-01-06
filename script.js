@@ -106,51 +106,54 @@ function updateThemeIcon(theme) {
 }
 
 // ===== Contact Form Handling =====
+// Guarded so the page doesn't error when the contact form is absent
 const contactForm = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+if (contactForm && formMessage) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-    // Simple validation
-    if (!name || !email || !message) {
-        showFormMessage('Please fill in all fields.', 'error');
-        return;
+        // Simple validation
+        if (!name || !email || !message) {
+            showFormMessage('Please fill in all fields.', 'error');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showFormMessage('Please enter a valid email address.', 'error');
+            return;
+        }
+
+        // Simulate form submission (since no backend)
+        // In a real scenario, you would send this data to a server
+        showFormMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Clear message after 5 seconds
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+            formMessage.className = 'form-message';
+        }, 5000);
+    });
+
+    function showFormMessage(message, type) {
+        formMessage.textContent = message;
+        formMessage.className = `form-message ${type}`;
+        formMessage.style.display = 'block';
+        
+        // Scroll to message
+        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        showFormMessage('Please enter a valid email address.', 'error');
-        return;
-    }
-
-    // Simulate form submission (since no backend)
-    // In a real scenario, you would send this data to a server
-    showFormMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
-    
-    // Reset form
-    contactForm.reset();
-    
-    // Clear message after 5 seconds
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-        formMessage.className = 'form-message';
-    }, 5000);
-});
-
-function showFormMessage(message, type) {
-    formMessage.textContent = message;
-    formMessage.className = `form-message ${type}`;
-    formMessage.style.display = 'block';
-    
-    // Scroll to message
-    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 // ===== Header Shadow on Scroll =====
