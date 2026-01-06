@@ -431,14 +431,15 @@ body {
     color: var(--text-secondary);
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
+    text-align: justify;
     line-height: 1.8;
 }
 
 /* ===== Skills Section ===== */
 .skills-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Force exactly 2 columns on larger screens */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
 }
 
