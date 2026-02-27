@@ -113,7 +113,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
@@ -121,21 +121,26 @@ body {
 }
 
 [data-theme="dark"] .bg-grid {
-    background-image: 
+    background-image:
         linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
     }
+
     25% {
         transform: translate(30px, -30px) scale(1.1);
     }
+
     50% {
         transform: translate(-20px, 20px) scale(0.9);
     }
+
     75% {
         transform: translate(20px, 30px) scale(1.05);
     }
@@ -324,22 +329,18 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.6) 0%,
-        rgba(249, 250, 251, 0.7) 50%,
-        rgba(255, 255, 255, 0.6) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(249, 250, 251, 0.7) 50%,
+            rgba(255, 255, 255, 0.6) 100%);
     backdrop-filter: blur(1px);
 }
 
 [data-theme="dark"] .hero-overlay {
-    background: linear-gradient(
-        135deg,
-        rgba(17, 24, 39, 0.85) 0%,
-        rgba(31, 41, 55, 0.75) 50%,
-        rgba(17, 24, 39, 0.85) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(17, 24, 39, 0.85) 0%,
+            rgba(31, 41, 55, 0.75) 50%,
+            rgba(17, 24, 39, 0.85) 100%);
 }
 
 .hero-container {
@@ -573,7 +574,9 @@ body {
 .project-links {
     margin-top: 1rem;
     display: flex;
+    justify-content: center;
     gap: 1rem;
+    text-align: center;
 }
 
 /* ===== Experience Section ===== */
@@ -828,6 +831,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -838,6 +842,7 @@ body {
         transform: scale(0.9);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
@@ -979,6 +984,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1087,21 +1093,17 @@ body {
     }
 
     .hero-overlay {
-        background: linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.9) 0%,
-            rgba(249, 250, 251, 0.85) 50%,
-            rgba(255, 255, 255, 0.9) 100%
-        ) !important;
+        background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(249, 250, 251, 0.85) 50%,
+                rgba(255, 255, 255, 0.9) 100%) !important;
     }
 
     [data-theme="dark"] .hero-overlay {
-        background: linear-gradient(
-            135deg,
-            rgba(17, 24, 39, 0.9) 0%,
-            rgba(31, 41, 55, 0.85) 50%,
-            rgba(17, 24, 39, 0.9) 100%
-        ) !important;
+        background: linear-gradient(135deg,
+                rgba(17, 24, 39, 0.9) 0%,
+                rgba(31, 41, 55, 0.85) 50%,
+                rgba(17, 24, 39, 0.9) 100%) !important;
     }
 
     .modal-close {
@@ -1140,4 +1142,3 @@ body {
         text-align: center;
     }
 }
-
