@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/gallery.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+            rel="stylesheet">
+        <title>Gallery</title>
+    </head>
+    <body>
+        <div class="gallery-container">
+            <h1>Previous Projects Gallery</h1>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn"
+                    data-filter="Christmas">Christmas</button>
+                <button class="filter-btn" data-filter="CNY">CNY</button>
+                <button class="filter-btn" data-filter="CoverPage">Cover
+                    Page</button>
+                <button class="filter-btn" data-filter="Safety">Safety</button>
+            </div>
+
+            <script>
+                const filterButtons = document.querySelectorAll(".filter-btn");
+
+                filterButtons.forEach(button => {
+                    button.addEventListener("click", () => {
+
+                        filterButtons.forEach(btn => btn.classList.remove("active"));
+
+                        button.classList.add("active");
+
+                        const filter = button.dataset.filter;
+
+                        const galleryItems = document.querySelectorAll(".gallery-grid .card");
+
+                        galleryItems.forEach(item => {
+                            if (filter === "All" || item.classList.contains(filter)) {
+                                item.style.display = "block";
+                            } else {
+                                item.style.display = "none";
+                            }
+                        });
+                    });
+                });
+            </script>
+
+            <div class="gallery-grid" id="gallery">
+
+            </div>
+        </div>
+
+        <button class="home-btn"><a href="index.html">Home</a></button>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="image-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <img src="" alt="Image Preview" id="modal-image" class="modal-image">
+        </div>
+    </div>
+
+    </body>
+</html>
+
+<script>
+    fetch("gallery.json")
+    .then(response => response.json())
+    .then(data => {
+        const gallery = document.getElementById("gallery");
+        data.forEach(item => {
+            gallery.innerHTML += 
+            `<div class="card ${item.category}">
+                <img src="${item.src}" alt="${item.title}" class="gallery-image" data-image-src="${item.src}" data-image-title="${item.title}">
+                <p>${item.title}</p>
+            </div>`;
+        });
+        attachImageModalListeners();
+    })
+    .catch(error => console.error("Error fetching gallery data:", error));
+
+    // ===== Image Modal Functionality =====
+    const imageModal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalClose = document.getElementById('modal-close');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    function attachImageModalListeners() {
+        const galleryImages = document.querySelectorAll('.gallery-image');
+        
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                const imageSrc = img.getAttribute('data-image-src');
+                const imageTitle = img.getAttribute('data-image-title');
+                modalImage.src = imageSrc;
+                modalImage.alt = imageTitle;
+                imageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+    }
+
+    function closeModal() {
+        imageModal.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            modalImage.src = '';
+        }, 300);
+    }
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+</script>

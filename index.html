@@ -1,294 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tan Yuan Seng - Fresh Computer Science Graduate | Software / AI / Cloud Engineer Portfolio">
-    <title>Tan Yuan Seng | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Background Decorations -->
-    <div class="bg-decoration">
-        <div class="bg-shape bg-shape-1"></div>
-        <div class="bg-shape bg-shape-2"></div>
-        <div class="bg-shape bg-shape-3"></div>
-        <div class="bg-shape bg-shape-4"></div>
-        <div class="bg-grid"></div>
-    </div>
-
-    <!-- Header / Navigation -->
-    <header class="header" id="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="#home">TAN YUAN SENG</a>
-                </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#experience" class="nav-link">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#education" class="nav-link">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#certifications" class="nav-link">Certifications</a>
-                    </li>
-                </ul>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <span class="theme-icon">🌙</span>
-                </button>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <img src="assets/home-background.jpg" alt="Background" class="hero-bg-image">
-            <div class="hero-overlay"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Tan Yuan Seng - Fresh Computer Science Graduate | Software / AI / Cloud Engineer Portfolio">
+        <title>Tan Yuan Seng | Portfolio</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <!-- Background Decorations -->
+        <div class="bg-decoration">
+            <div class="bg-shape bg-shape-1"></div>
+            <div class="bg-shape bg-shape-2"></div>
+            <div class="bg-shape bg-shape-3"></div>
+            <div class="bg-shape bg-shape-4"></div>
+            <div class="bg-grid"></div>
         </div>
-        <div class="hero-container">
-            <div class="hero-content fade-in">
-                <h1 class="hero-name">Tan Yuan Seng</h1>
-                <h2 class="hero-role">Fresh Computer Science Graduate</h2>
-                <p class="hero-intro">Passionate about building innovative solutions and exploring the intersection of software engineering, artificial intelligence, and cloud technologies.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content fade-in">
-                <ul class="about-text">
-                    <li>Fresh graduate with interest in IT fields especially coding for software, web application and AI development</li>
-                    <li>Experienced in building a multi-functional smart health mobile app using Flutter with the integration of the Firebase and Gemini API</li>
-                    <li>Familiar with machine learning, optimization algorithms, network security, cloud computing, database management</li>
-                    <li>I enjoy learning new technologies and willing to handle new challenges</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills section" id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-content">
-                <div class="skill-category fade-in">
-                    <h3 class="skill-category-title" style="text-align: center;">Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">C++</span>
-                        <span class="skill-badge">Java</span>
-                        <span class="skill-badge">Dart (Flutter)</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">HTML/CSS</span>
-                        <span class="skill-badge">SQL & PHP</span>
+        <!-- Header / Navigation -->
+        <header class="header" id="header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-laptop"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                        </svg>
+                        <a href="#home">Yuan Seng</a>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#experience"
+                                class="nav-link">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#education" class="nav-link">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#certifications"
+                                class="nav-link">Certifications</a>
+                        </li>
+                    </ul>
+                    <button class="theme-toggle" id="theme-toggle"
+                        aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
                     </div>
                 </div>
-                <div class="skill-category fade-in">
-                    <h3 class="skill-category-title" style="text-align: center;">Technologies</h3>
-                    <div class="skill-items">
-                        <span class="skill-badge">Firebase</span>
-                        <span class="skill-badge">Git/GitHub</span>
-                        <span class="skill-badge">PyTorch</span>
-                        <span class="skill-badge">Kaggle</span>
-                        <span class="skill-badge">Anaconda</span>
-                        <span class="skill-badge">Google Colab</span>
-                    </div>
-                </div>
-                <div class="skill-category fade-in">
-                    <h3 class="skill-category-title" style="text-align: center;">Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-badge">VS Code</span>
-                        <span class="skill-badge">Android Studio</span>
-                        <span class="skill-badge">Canva</span>
-                        <span class="skill-badge">CapCut</span>
-                        <span class="skill-badge">Tinkercad</span>
-                    </div>
-                </div>
-                <div class="skill-category fade-in">
-                    <h3 class="skill-category-title" style="text-align: center;">Knowledge Areas</h3>
-                    <div class="skill-items">
-                        <span class="skill-badge">AI (ML, LLM)</span>
-                        <span class="skill-badge">Algorithms</span>
-                        <span class="skill-badge">Network Security</span>
-                        <span class="skill-badge">Cloud Computing (AWS)</span>
-                        <span class="skill-badge">Database (Oracle, phpMyAdmin)</span>
+            </nav>
+        </header>
 
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-background">
+                <img src="assets/home-background.jpg" alt="Background"
+                    class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content fade-in">
+                    <h1 class="hero-name">Tan Yuan Seng</h1>
+                    <h2 class="hero-role">Fresh Computer Science Graduate</h2>
+                    <p class="hero-intro">Passionate about building reliable and
+                        scalable applications through structured thinking and
+                        clean code.
+                        I enjoy thinking and design logical system flows and
+                        continuously improving my technical skills within a
+                        growth-oriented
+                        organization.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View
+                            Projects</a>
+                        <a
+                            href="https://www.canva.com/design/DAHAhFz2gik/iMRccVB8vK4tOsEMxdem8w/view?utm_content=DAHAhFz2gik&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha60cd83c46"
+                            target="_blank" class="btn btn-primary">View
+                            Resume</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="projects section" id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-header">
-                        <h3 class="project-title">Health Mobile Application (FYP)</h3>
-                        <span class="project-badge">⭐ Featured</span>
-                    </div>
-                    <p class="project-description">
-                        A full-stack health mobile application integrating AI-powered features including emergency assistance, symptom analysis, mental health chatbot, nutrition planner, and multiple reminder systems.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Gemini API</span>
-                        <span class="tech-tag">Github</span>
-                    </div>
-                    <p class="project-role">
-                        <strong>Role:</strong> Full development — UI/UX, logic, Firebase integration, Gemini API, testing.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://www.canva.com/design/DAGnVlvctL0/drFqz49fkUiTz5hrVYYmNA/view?utm_content=DAGnVlvctL0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha5586fd228" target="_blank">Link to view the slides</a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-header">
-                        <h3 class="project-title">Pneumonia Detection (ML Models Comparison)</h3>
-                    </div>
-                    <p class="project-description">
-                        Compared ResNet50, EfficientNetB0, and a custom 3-layer CNN for pneumonia detection using transfer learning and feature extraction. Handled model configuration, FC layer modification, training, and performance evaluation.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">Kaggle</span>
-                    </div>
-                    <p class="project-role">
-                        <strong>Role:</strong> Setting up the architecture and model training
-                    </p>
-                    <div class="project-links">
-                        <!-- Space for future links -->
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-header">
-                        <h3 class="project-title">Student Routine Organizer Web Application</h3>
-                    </div>
-                    <p class="project-description">
-                        Using frontend and backend technologies to create a student routine organizer web application.
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Github</span>
-                        <span class="tech-tag">PHP</span>
-                    </div>
-                    <p class="project-role">
-                        <strong>Role:</strong> CRUD operations for Diary Module
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Kyuubiuwu/Server" target="_blank">Link to the code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="experience section" id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-content">
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Assistant Coach</h3>
-                        <span class="experience-period">Oct 2024 – Jan 2025</span>
-                    </div>
-                    <p class="experience-company">Three International Schools</p>
-                    <ul class="experience-list">
-                        <li>Designed posters and educational visuals using Canva</li>
-                        <li>Edited videos with CapCut</li>
-                        <li>Created simple 3D models with Tinkercad</li>
-                        <li>Produced basic 2D animations</li>
-                        <li>Mentored students and supported activity planning</li>
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content fade-in">
+                    <ul class="about-text">
+                        <li>Computer Science graduate with strong passion for
+                            software development and structured
+                            problem-solving.</li>
+                        <li>Enjoy designing logical system flows and
+                            implementing clean, maintainable code.</li>
+                        <li>Developed a full-stack smart health mobile
+                            application using Flutter, Firebase and Gemini
+                            API.</li>
+                        <li>Experienced in database design, application logic,
+                            and API integration.</li>
+                        <li>Actively enhance technical skills through continuous
+                            learning and independent research.</li>
+                        <li>Eager to grow within an organization that emphasizes
+                            mentorship, continuous training and professional
+                            development.
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section class="education section" id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-content">
-                <div class="education-card fade-in">
-                    <div class="education-header">
-                        <h3 class="education-degree">Bachelor of Computer Science (Hons)</h3>
-                        <span class="education-period">Graduated Oct 2025</span>
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-content">
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title"
+                            style="text-align: center;">Programming
+                            Languages</h3>
+                        <div class="skill-items">
+                            <span class="skill-badge">Python (Pytorch)</span>
+                            <span class="skill-badge">C++</span>
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">Dart (Flutter)</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">HTML/CSS</span>
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">PHP</span>
+                        </div>
                     </div>
-                    <p class="education-institution">Universiti Tunku Abdul Rahman (UTAR)</p>
-                    <p class="education-cgpa">CGPA: 3.1164</p>
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title"
+                            style="text-align: center;">Technologies</h3>
+                        <div class="skill-items">
+                            <span class="skill-badge">Firebase</span>
+                            <span class="skill-badge">Git</span>
+                            <span class="skill-badge">Kaggle</span>
+                            <span class="skill-badge">Anaconda</span>
+                            <span class="skill-badge">Google Colab</span>
+                        </div>
+                    </div>
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title"
+                            style="text-align: center;">Tools</h3>
+                        <div class="skill-items">
+                            <span class="skill-badge">VS Code</span>
+                            <span class="skill-badge">Android Studio</span>
+                            <span class="skill-badge">Canva</span>
+                            <span class="skill-badge">CapCut</span>
+                            <span class="skill-badge">Tinkercad</span>
+                        </div>
+                    </div>
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title"
+                            style="text-align: center;">Knowledge Areas</h3>
+                        <div class="skill-items">
+                            <span class="skill-badge">AI (ML, LLM)</span>
+                            <span class="skill-badge">Algorithms</span>
+                            <span class="skill-badge">Network Security</span>
+                            <span class="skill-badge">Cloud Computing
+                                (AWS)</span>
+                            <span class="skill-badge">Database (Oracle,
+                                phpMyAdmin)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section class="certifications section" id="certifications">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications-content">
-                <a href="https://www.credly.com/badges/219024c6-26e9-4eef-ab8f-bdaa71f99dde" target="_blank" rel="noopener noreferrer" class="cert-card fade-in">
-                    <h3 class="cert-title">AWS Academy Graduate — Cloud Foundations</h3>
-                    <span class="cert-link-icon">🔗</span>
-                </a>
-                <div class="cert-card fade-in cert-card-clickable" id="hackathon-cert" data-image="assets/hackathon-certificate.jpg">
-                    <h3 class="cert-title">Hackathon Participation</h3>
-                    <span class="cert-link-icon">🖼️</span>
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-header">
+                            <h3 class="project-title">Health Mobile Application
+                                (FYP)</h3>
+                            <span class="project-badge">⭐ Featured</span>
+                        </div>
+                        <p class="project-description">
+                            A full-stack health mobile application integrating
+                            AI-powered features including emergency assistance,
+                            symptom analysis, mental health chatbot, nutrition
+                            planner, and multiple reminder systems.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Github</span>
+                        </div>
+                        <p class="project-role">
+                            <strong>Role:</strong> Full development — UI/UX,
+                            logic, Firebase integration, Gemini API, testing.
+                        </p>
+                        <div class="project-buttons">
+                            <a
+                                href="https://www.canva.com/design/DAGnVlvctL0/drFqz49fkUiTz5hrVYYmNA/view?utm_content=DAGnVlvctL0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha5586fd228"
+                                class="btn btn-primary" target="_blank">Link to
+                                view the slides</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-header">
+                            <h3 class="project-title">Pneumonia Detection (ML
+                                Models Comparison)</h3>
+                        </div>
+                        <p class="project-description">
+                            Compared ResNet50, EfficientNetB0, and a custom
+                            3-layer CNN for pneumonia detection using transfer
+                            learning and feature extraction. Handled model
+                            configuration, FC layer modification, training, and
+                            performance evaluation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Kaggle</span>
+                        </div>
+                        <p class="project-role">
+                            <strong>Role:</strong> Setting up the architecture
+                            and model training
+                        </p>
+                        <div class="project-buttons">
+                            <!-- Space for future links -->
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-header">
+                            <h3 class="project-title">Student Routine Organizer
+                                Web Application</h3>
+                        </div>
+                        <p class="project-description">
+                            Using frontend and backend technologies to create a
+                            student routine organizer web application.
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Github</span>
+                                <span class="tech-tag">PHP</span>
+                            </div>
+                            <p class="project-role">
+                                <strong>Role:</strong> CRUD operations for Diary
+                                Module
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://github.com/Kyuubiuwu/Server"
+                                    target="_blank" class="btn btn-primary">Link
+                                    to the code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience section" id="experience">
+                <div class="container">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-content">
+                        <div class="experience-card fade-in">
+                            <div class="experience-header">
+                                <h3 class="experience-title">Assistant
+                                    Coach</h3>
+                                <span class="experience-period">Oct 2024 – Jan
+                                    2025</span>
+                            </div>
+                            <p class="experience-company">Three International
+                                Schools</p>
+                            <ul class="experience-list">
+                                <li>Designed posters and educational visuals
+                                    using Canva</li>
+                                <li>Edited videos with CapCut</li>
+                                <li>Created simple 3D models with Tinkercad</li>
+                                <li>Produced basic 2D animations</li>
+                                <li>Mentored students and supported activity
+                                    planning</li>
+                            </ul>
+                            <div
+                                style="display: flex; justify-content: center; align-items: center; gap: 100px;">
+                                <a href="gallery.html"
+                                    class="btn btn-secondary">View Projects</a>
+                                <a
+                                    href="https://www.canva.com/design/DAGawTo6t58/4BIPbezn2kg1sgdtphKDQQ/view?utm_content=DAGawTo6t58&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9d52919ab9"
+                                    target="_blank"
+                                    class="btn btn-secondary">View Slides</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education section" id="education">
+                <div class="container">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-content">
+                        <div class="education-card fade-in">
+                            <div class="education-header">
+                                <h3 class="education-degree">Bachelor of
+                                    Computer Science (Hons)</h3>
+                                <span class="education-period">Graduated Oct
+                                    2025</span>
+                            </div>
+                            <p class="education-institution">Universiti Tunku
+                                Abdul Rahman (UTAR)</p>
+                            <p class="education-cgpa">CGPA: 3.1164</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section class="certifications section" id="certifications">
+                <div class="container">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="certifications-content">
+                        <a
+                            href="https://www.credly.com/badges/219024c6-26e9-4eef-ab8f-bdaa71f99dde"
+                            target="_blank" rel="noopener noreferrer"
+                            class="cert-card fade-in">
+                            <h3 class="cert-title">AWS Academy Graduate — Cloud
+                                Foundations</h3>
+                            <span class="cert-link-icon">🔗</span>
+                        </a>
+                        <div class="cert-card fade-in cert-card-clickable"
+                            id="hackathon-cert"
+                            data-image="assets/hackathon-certificate.jpg">
+                            <h3 class="cert-title">Hackathon Participation</h3>
+                            <span class="cert-link-icon">🖼️</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <p>&copy; 2025 Tan Yuan Seng. All rights reserved.</p>
+                </div>
+            </footer>
+
+            <!-- Image Modal -->
+            <div class="image-modal" id="image-modal">
+                <div class="modal-overlay" id="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close" id="modal-close"
+                        aria-label="Close modal">&times;</button>
+                    <img src alt="Certificate Preview" id="modal-image"
+                        class="modal-image">
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Tan Yuan Seng. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Image Modal -->
-    <div class="image-modal" id="image-modal">
-        <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
-            <img src="" alt="Certificate Preview" id="modal-image" class="modal-image">
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <script src="script.js"></script>
+        </body>
+    </html>

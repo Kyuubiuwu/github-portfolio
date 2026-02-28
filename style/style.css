@@ -571,12 +571,11 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
-.project-links {
-    margin-top: 1rem;
+.project-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    text-align: center;
+    margin-top: 1rem;
 }
 
 /* ===== Experience Section ===== */
